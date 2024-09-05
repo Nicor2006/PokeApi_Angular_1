@@ -1,0 +1,121 @@
+.example-card {
+  width: 100%; /* Ajusta la tarjeta al ancho disponible */
+  max-width: 500px; /* Limita el ancho máximo de cada tarjeta */
+  height: 100%;
+  max-height: 500px;
+}
+  .example-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 10px; /* Espacio entre tarjetas */
+    padding: 10px;
+    justify-items: center; /* Centra las tarjetas en cada columna */
+  }
+
+.Card-title {
+   color: rgb(74, 197, 156);
+  }
+.InfoPokemon {
+  color: white;
+}
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.pagination-button {
+  flex: 0 0 auto; /* Evita que los botones se estiren */
+  font-size: 1.2rem; /* Aumenta el tamaño del texto del botón */
+  padding: 12px 24px; /* Aumenta el padding del botón */
+  min-width: 120px; /* Asegura un ancho mínimo para el botón */
+}
+
+.prev-button {
+  margin-right: auto; /* Empuja el botón a la izquierda */
+}
+
+.next-button {
+  margin-left: auto; /* Empuja el botón a la derecha */
+}
+.Sub-Title {
+color:rgb(66, 161, 130);
+}
+.Sprites-pokemon {
+  width: 100%; /* Ajusta la tarjeta al ancho disponible */
+  max-width: 200px; /* Limita el ancho máximo de cada tarjeta */
+  height: 100%;
+  max-height: 200px;
+}
+
+.Type-Normal {
+  color: #A8A77A; /* Normal */
+}
+
+.Type-Fire {
+  color: #EE8130; /* Fuego */
+}
+
+.Type-Water {
+  color: #6390F0; /* Agua */
+}
+
+.Type-Electric {
+  color: #F7D02C; /* Eléctrico */
+}
+
+.Type-Grass {
+  color: #7AC74C; /* Planta */
+}
+
+.Type-Ice {
+  color: #96D9D6; /* Hielo */
+}
+
+.Type-Fighting {
+  color: #C22E28; /* Lucha */
+}
+
+.Type-Poison {
+  color: #A33EA1; /* Veneno */
+}
+
+.Type-Ground {
+  color: #E2BF65; /* Tierra */
+}
+
+.Type-Flying {
+  color: #A98FF3; /* Volador */
+}
+
+.Type-Psychic {
+  color: #F95587; /* Psíquico */
+}
+
+.Type-Bug {
+  color: #A6B91A; /* Bicho */
+}
+
+.Type-Rock {
+  color: #B6A136; /* Roca */
+}
+
+.Type-Ghost {
+  color: #735797; /* Fantasma */
+}
+
+.Type-Dragon {
+  color: #6F35FC; /* Dragón */
+}
+
+.Type-Dark {
+  color: #705746; /* Siniestro */
+}
+
+.Type-Steel {
+  color: #B7B7CE; /* Acero */
+}
+
+.Type-Fairy {
+  color: #D685AD; /* Hada */
+}

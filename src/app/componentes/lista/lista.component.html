@@ -1,0 +1,52 @@
+@if(EsShiny == 0){<button mat-button (click)="CambiarAShiny()">Cambiar los pokemons a Shiny</button>}
+@else {<button mat-button (click)="CambiarANormal()">Regresar los pokemons a normal</button>}
+
+@if (pokemonesCompleto) { 
+    <div class="example-container">
+    @for(item of pokemonesCompleto; track item.id){
+    <mat-card class="example-card">
+    <mat-card-header>
+    <mat-card-title class="Card-title">{{ capitalizeFirstLetter(item.name)}}</mat-card-title>
+    @if (EsShiny == 0) {<div mat-card-avatar class="Sprites-pokemon"><img [src]=' item.sprites.front_default'></div>}
+    @else {<div mat-card-avatar class="Sprites-pokemon"><img [src]=' item.sprites.front_shiny'></div>}
+
+
+    <mat-card-subtitle>
+        
+        @if (item.types.length == 2) {
+            <div class="Type-{{ capitalizeFirstLetter(item.types[0].type.name) }}" >{{capitalizeFirstLetter(item.types[0].type.name)}}</div>
+            <div class="Type-{{ capitalizeFirstLetter(item.types[1].type.name) }}">{{capitalizeFirstLetter(item.types[1].type.name)}}</div>        }
+        @else {
+            <div class="Type-{{ capitalizeFirstLetter(item.types[0].type.name) }}" >{{capitalizeFirstLetter(item.types[0].type.name)}}</div>
+        }
+
+    </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+    <p class="InfoPokemon"><b class="Sub-Title">- Numero de Pokedex</b> : #{{item.id}}</p>
+    @for (i of item.abilities; track $index) {
+        <p class="InfoPokemon"><b class="Sub-Title">- Habilidad {{$index + 1}}</b>: {{capitalizeFirstLetter(i.ability.name)}}</p>
+    }
+    <p class="InfoPokemon"><b class="Sub-Title">- Altura</b> : {{item.height / 10}} M</p>
+    </mat-card-content>
+    <mat-card-actions>
+    <button mat-button (click)="playSound(item.cries.latest)">Sonido</button>
+    </mat-card-actions>
+    </mat-card>
+    
+     
+    }
+</div>  
+}
+<div class="pagination-controls">
+@if (listaPokemones.previous) {
+    <button mat-button (click)="previousPage(listaPokemones.previous)" class="pagination-button prev-button">Anterior</button>
+}
+
+
+
+@if (listaPokemones.next) {
+    <button mat-button (click)="nextPage(listaPokemones.next)" class="pagination-button next-button">Siguiente</button>
+ }
+
+</div>
